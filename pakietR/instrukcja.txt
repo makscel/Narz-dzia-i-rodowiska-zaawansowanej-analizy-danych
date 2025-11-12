@@ -1,0 +1,20 @@
+Dane do analizy znajdują się w pliku data.rds Do R można je wczytać za pomocą funkcji readRDS.
+
+Wyświetl podgląd 10 wierszy o niezerowych wartościach zmiennych a i b.
+
+Wyświetl następujące statystyki:
+liczba wszystkich wierszy,
+udział wartości brakujących w zbiorze danych,
+czas początkowy i końcowy.
+
+Wyświetl następujące statystyki dla zmiennych a i b:
+Min - wartość minimalna, 
+Q1 - pierwszy kwartyl, 
+Me - mediana, 
+Śr - średnia, 
+Q3 - trzeci kwartyl, 
+Max - wartość maksymalna.
+
+Narysuj wykres czasowy dla zmiennej a (czas na osi x, wartość zmiennej na osi y). Każdy punkt na wykresie powinien odpowiadać średniej z okresu 10-minutowego.
+
+Narysuj histogram dla zmiennej a. Oś y powinna mieć skalę logarytmiczną.
