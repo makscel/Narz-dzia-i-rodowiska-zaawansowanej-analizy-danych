@@ -1,0 +1,47 @@
+#1
+Dla danych:
+
+
+df_fig1 = pd.DataFrame({
+    'cat': ['A', 'A', 'A', 'A', 'B', 'B', 'C', 'C', 'C'],
+    'subcat': ['a', 'a', 'c', 'a', 'b', 'c', 'a', 'b', 'c'],
+})
+
+df_fig2 = pd.DataFrame({
+    'A' : [80, 78, 75],
+    'B' : [66, 70, 74],
+    'C' : [15, 25, 10]
+})
+
+Stwórz w matplotlib wykres. [zdjecie]
+
+
+
+#2
+Stwórz następującą aplikację w Dash: [zdjecie]
+
+Aplikacja powinna uwzględniać następujące elementy:
+
+Nagłówek H1 "Lab Dash App".
+Pole typu Dropdown zawierające następujące wartości: iris, wine, breast_cancer.
+Po wybraniu opcji w polu Dropdown do DataTable powinien zostać załadowany odpowiadający zbiór za pomocą funkcji load_iris, load_wine lub load_breast_cancer z modułu sklearn.datasets.
+Tabela powinna mieć poziomy pasek przewijania, gdy kolumny nie mieszczą się na ekranie.
+Tabela powinna umożliwiać wybór kolumny za pomocą radiobutton'a pokazywanego w nagłówku tabeli.
+Tabela powinna posiadać stronicowanie, maksymalnie 5 wierszy per strona.
+Po wybraniu kolumny w tabeli, na histogramie powinien zostać pokazywany rozkład wartości wybranej zmiennej.
+
+
+
+#3
+Przygotuj w Streamlit aplikację podobną do tej w Dash. Zamiast wyboru kolumny za pomocą radiobutton'a w nagłówku tabeli możesz wykorzystać komponent typu selectbox.
+
+Do tworzenia i testowania aplikacji Streamlit może być pomocna strona https://streamlit.io/playground. Możesz również skorzystać z własnego środowiska programistycznego dla Python (np. VS Code) lub z prostego edytora https://thonny.org/ z wbudowanym Python.
+
+
+
+#4
+Stwórz raport z wykorzystaniem Quarto. Raport powinien zawierać analogiczne treści jak aplikacje Dash/Streamlit, przedstawiając je w następujący sposób:
+
+Raport powinien zostać wygenerowany jako strona HTML z opcją embed-resources ustawioną na true. W raporcie powinien znaleźć się zarówno kod jak i wynik uruchomienia kodu (teksty, tabele, wykresy).
+Każdy zbiór danych powinien być osobny rozdziałem, raport powinien posiadać spis treści.
+W ramach każdego rozdziału powinna zostać wyświetlona tabelka ze zbiorem danych oraz wykres prezentujący histogramy zmiennych numerycznych.

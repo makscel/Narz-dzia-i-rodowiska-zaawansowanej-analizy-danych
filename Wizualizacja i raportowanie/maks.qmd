@@ -1,0 +1,88 @@
+---
+title: "Raport z analizą danych"
+author: "Maksymilian Celtner"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    embed-resources: true
+toc: true
+---
+
+# Spis treści
+1. [Zbiór danych Iris](#iris)
+2. [Zbiór danych Wine](#wine)
+3. [Zbiór danych Breast Cancer](#breast_cancer)
+
+# Zbiór danych Iris {#iris}
+
+W tym rozdziale analizujemy zbiór danych **Iris**.
+
+```{python}
+import pandas as pd
+import plotly.express as px
+from sklearn.datasets import load_iris
+
+# Funkcja ładowania danych
+def load_data(dataset_name):
+    if dataset_name == 'iris':
+        data = load_iris()
+    df = pd.DataFrame(data.data, columns=data.feature_names)
+    return df
+
+# Załaduj dane Iris
+df_iris = load_data('iris')
+
+# Wyświetlenie tabeli
+df_iris.head()
+
+# Generowanie histogramów dla każdej zmiennej numerycznej
+for column in df_iris.columns:
+    fig = px.histogram(df_iris, x=column, nbins=20, title=f'Histogram of {column}')
+    fig.show()
+```
+# Zbiór danych Wine {#wine}
+
+W tym rozdziale analizujemy zbiór danych **Wine**.
+
+```{python}
+# Załaduj dane Wine
+from sklearn.datasets import load_wine
+def load_data(dataset_name):
+    if dataset_name == 'wine':
+        data = load_wine()
+    df = pd.DataFrame(data.data, columns=data.feature_names)
+    return df
+
+df_wine = load_data('wine')
+
+# Wyświetlenie tabeli
+df_wine.head()
+
+# Generowanie histogramów dla każdej zmiennej numerycznej
+for column in df_wine.columns:
+    fig = px.histogram(df_wine, x=column, nbins=20, title=f'Histogram of {column}')
+    fig.show()
+```
+# Zbiór danych Breast Cancer {#breast_cancer}
+
+W tym rozdziale analizujemy zbiór danych **Breast Cancer**.
+
+```{python}
+# Załaduj dane Breast Cancer
+from sklearn.datasets import load_breast_cancer
+def load_data(dataset_name):
+    if dataset_name == 'breast_cancer':
+        data = load_breast_cancer()
+    df = pd.DataFrame(data.data, columns=data.feature_names)
+    return df
+
+df_breast_cancer = load_data('breast_cancer')
+
+# Wyświetlenie tabeli
+df_breast_cancer.head()
+
+# Generowanie histogramów dla każdej zmiennej numerycznej
+for column in df_breast_cancer.columns:
+    fig = px.histogram(df_breast_cancer, x=column, nbins=20, title=f'Histogram of {column}')
+    fig.show()
+```
